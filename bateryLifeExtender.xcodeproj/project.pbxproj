@@ -18,6 +18,10 @@
 		7F2D3EB217F7426B00A1C39A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3E9117F7426B00A1C39A /* Cocoa.framework */; };
 		7F2D3EBA17F7426B00A1C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3EB817F7426B00A1C39A /* InfoPlist.strings */; };
 		7F2D3EBC17F7426B00A1C39A /* bateryLifeExtenderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D3EBB17F7426B00A1C39A /* bateryLifeExtenderTests.m */; };
+		7F2D3ECC17F7483200A1C39A /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3ECA17F7483200A1C39A /* leaf.png */; };
+		7F2D3ECD17F7483200A1C39A /* leafInv.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3ECB17F7483200A1C39A /* leafInv.png */; };
+		7F2D3ED417F7531000A1C39A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3ED317F7531000A1C39A /* IOKit.framework */; };
+		7F2D3ED717F75D0500A1C39A /* battery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D3ED617F75D0500A1C39A /* battery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,11 @@
 		7F2D3EB717F7426B00A1C39A /* bateryLifeExtenderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bateryLifeExtenderTests-Info.plist"; sourceTree = "<group>"; };
 		7F2D3EB917F7426B00A1C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F2D3EBB17F7426B00A1C39A /* bateryLifeExtenderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bateryLifeExtenderTests.m; sourceTree = "<group>"; };
+		7F2D3ECA17F7483200A1C39A /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaf.png; sourceTree = "<group>"; };
+		7F2D3ECB17F7483200A1C39A /* leafInv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leafInv.png; sourceTree = "<group>"; };
+		7F2D3ED317F7531000A1C39A /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		7F2D3ED517F75D0500A1C39A /* battery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = battery.h; sourceTree = "<group>"; };
+		7F2D3ED617F75D0500A1C39A /* battery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = battery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2D3ED417F7531000A1C39A /* IOKit.framework in Frameworks */,
 				7F2D3E9217F7426B00A1C39A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +105,7 @@
 		7F2D3E9017F7426B00A1C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F2D3ED317F7531000A1C39A /* IOKit.framework */,
 				7F2D3E9117F7426B00A1C39A /* Cocoa.framework */,
 				7F2D3EB017F7426B00A1C39A /* XCTest.framework */,
 				7F2D3E9317F7426B00A1C39A /* Other Frameworks */,
@@ -115,11 +126,15 @@
 		7F2D3E9717F7426B00A1C39A /* bateryLifeExtender */ = {
 			isa = PBXGroup;
 			children = (
+				7F2D3ECA17F7483200A1C39A /* leaf.png */,
+				7F2D3ECB17F7483200A1C39A /* leafInv.png */,
 				7F2D3EA317F7426B00A1C39A /* AppDelegate.h */,
 				7F2D3EA417F7426B00A1C39A /* AppDelegate.m */,
 				7F2D3EA617F7426B00A1C39A /* MainMenu.xib */,
 				7F2D3EA917F7426B00A1C39A /* Images.xcassets */,
 				7F2D3E9817F7426B00A1C39A /* Supporting Files */,
+				7F2D3ED517F75D0500A1C39A /* battery.h */,
+				7F2D3ED617F75D0500A1C39A /* battery.m */,
 			);
 			path = bateryLifeExtender;
 			sourceTree = "<group>";
@@ -231,9 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2D3E9C17F7426B00A1C39A /* InfoPlist.strings in Resources */,
+				7F2D3ECC17F7483200A1C39A /* leaf.png in Resources */,
 				7F2D3EAA17F7426B00A1C39A /* Images.xcassets in Resources */,
 				7F2D3EA217F7426B00A1C39A /* Credits.rtf in Resources */,
 				7F2D3EA817F7426B00A1C39A /* MainMenu.xib in Resources */,
+				7F2D3ECD17F7483200A1C39A /* leafInv.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2D3ED717F75D0500A1C39A /* battery.m in Sources */,
 				7F2D3EA517F7426B00A1C39A /* AppDelegate.m in Sources */,
 				7F2D3E9E17F7426B00A1C39A /* main.m in Sources */,
 			);
