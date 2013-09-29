@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F1FCD7917F868C100ABFC6F /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1FCD7817F868C100ABFC6F /* NSAttributedString+Hyperlink.m */; };
+		7F2D3E9217F7426B00A1C39A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3E9117F7426B00A1C39A /* Cocoa.framework */; };
+		7F2D3E9C17F7426B00A1C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3E9A17F7426B00A1C39A /* InfoPlist.strings */; };
+		7F2D3E9E17F7426B00A1C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D3E9D17F7426B00A1C39A /* main.m */; };
+		7F2D3EA217F7426B00A1C39A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3EA017F7426B00A1C39A /* Credits.rtf */; };
+		7F2D3EA517F7426B00A1C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D3EA417F7426B00A1C39A /* AppDelegate.m */; };
+		7F2D3EA817F7426B00A1C39A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3EA617F7426B00A1C39A /* MainMenu.xib */; };
+		7F2D3EAA17F7426B00A1C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3EA917F7426B00A1C39A /* Images.xcassets */; };
+		7F2D3EB117F7426B00A1C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3EB017F7426B00A1C39A /* XCTest.framework */; };
+		7F2D3EB217F7426B00A1C39A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3E9117F7426B00A1C39A /* Cocoa.framework */; };
+		7F2D3ECC17F7483200A1C39A /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3ECA17F7483200A1C39A /* leaf.png */; };
+		7F2D3ECD17F7483200A1C39A /* leafInv.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D3ECB17F7483200A1C39A /* leafInv.png */; };
+		7F2D3ED417F7531000A1C39A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2D3ED317F7531000A1C39A /* IOKit.framework */; };
+		7F2D3ED717F75D0500A1C39A /* battery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D3ED617F75D0500A1C39A /* battery.m */; };
+		7FF6A6A417F894F3007DF566 /* SYB.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A217F894F3007DF566 /* SYB.png */; };
+		7FF6A6A517F894F3007DF566 /* SYB.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A317F894F3007DF566 /* SYB.svg */; };
+		7FF6A6AD17F89769007DF566 /* SYB16.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A617F89769007DF566 /* SYB16.png */; };
+		7FF6A6AE17F89769007DF566 /* SYB32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A717F89769007DF566 /* SYB32.png */; };
+		7FF6A6AF17F89769007DF566 /* SYB128.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A817F89769007DF566 /* SYB128.png */; };
+		7FF6A6B017F89769007DF566 /* SYB256.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6A917F89769007DF566 /* SYB256.png */; };
+		7FF6A6B117F89769007DF566 /* SYB512.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6AA17F89769007DF566 /* SYB512.png */; };
+		7FF6A6B217F89769007DF566 /* SYB512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6AB17F89769007DF566 /* SYB512@2x.png */; };
+		7FF6A6B317F89769007DF566 /* SYBINV.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6AC17F89769007DF566 /* SYBINV.png */; };
+		7FF6A6B617F897C0007DF566 /* SYB64.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FF6A6B517F897C0007DF566 /* SYB64.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F2D3EB317F7426B00A1C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F2D3E8617F7426B00A1C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F2D3E8D17F7426B00A1C39A;
+			remoteInfo = bateryLifeExtender;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F1FCD7717F868C100ABFC6F /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Hyperlink.h"; path = "bateryLifeExtender/NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		7F1FCD7817F868C100ABFC6F /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Hyperlink.m"; path = "bateryLifeExtender/NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
+		7F2D3E8E17F7426B00A1C39A /* batteryLifeExtender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = batteryLifeExtender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2D3E9117F7426B00A1C39A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7F2D3E9417F7426B00A1C39A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7F2D3E9517F7426B00A1C39A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7F2D3E9617F7426B00A1C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F2D3E9917F7426B00A1C39A /* batteryLifeExtender-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "batteryLifeExtender-Info.plist"; sourceTree = "<group>"; };
+		7F2D3E9B17F7426B00A1C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F2D3E9D17F7426B00A1C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F2D3E9F17F7426B00A1C39A /* batteryLifeExtender-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "batteryLifeExtender-Prefix.pch"; sourceTree = "<group>"; };
+		7F2D3EA117F7426B00A1C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7F2D3EA317F7426B00A1C39A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F2D3EA417F7426B00A1C39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F2D3EA717F7426B00A1C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7F2D3EA917F7426B00A1C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F2D3EAF17F7426B00A1C39A /* batteryLifeExtenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = batteryLifeExtenderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2D3EB017F7426B00A1C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7F2D3ECA17F7483200A1C39A /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaf.png; sourceTree = "<group>"; };
+		7F2D3ECB17F7483200A1C39A /* leafInv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leafInv.png; sourceTree = "<group>"; };
+		7F2D3ED317F7531000A1C39A /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		7F2D3ED517F75D0500A1C39A /* battery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = battery.h; sourceTree = "<group>"; };
+		7F2D3ED617F75D0500A1C39A /* battery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = battery.m; sourceTree = "<group>"; };
+		7FF6A6A217F894F3007DF566 /* SYB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB.png; sourceTree = "<group>"; };
+		7FF6A6A317F894F3007DF566 /* SYB.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SYB.svg; sourceTree = "<group>"; };
+		7FF6A6A617F89769007DF566 /* SYB16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB16.png; sourceTree = "<group>"; };
+		7FF6A6A717F89769007DF566 /* SYB32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB32.png; sourceTree = "<group>"; };
+		7FF6A6A817F89769007DF566 /* SYB128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB128.png; sourceTree = "<group>"; };
+		7FF6A6A917F89769007DF566 /* SYB256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB256.png; sourceTree = "<group>"; };
+		7FF6A6AA17F89769007DF566 /* SYB512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB512.png; sourceTree = "<group>"; };
+		7FF6A6AB17F89769007DF566 /* SYB512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SYB512@2x.png"; sourceTree = "<group>"; };
+		7FF6A6AC17F89769007DF566 /* SYBINV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYBINV.png; sourceTree = "<group>"; };
+		7FF6A6B517F897C0007DF566 /* SYB64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SYB64.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F2D3E8B17F7426B00A1C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2D3ED417F7531000A1C39A /* IOKit.framework in Frameworks */,
+				7F2D3E9217F7426B00A1C39A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2D3EAC17F7426B00A1C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2D3EB217F7426B00A1C39A /* Cocoa.framework in Frameworks */,
+				7F2D3EB117F7426B00A1C39A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F2D3E8517F7426B00A1C39A = {
+			isa = PBXGroup;
+			children = (
+				7F1FCD7717F868C100ABFC6F /* NSAttributedString+Hyperlink.h */,
+				7F1FCD7817F868C100ABFC6F /* NSAttributedString+Hyperlink.m */,
+				7F2D3E9717F7426B00A1C39A /* bateryLifeExtender */,
+				7F2D3E9017F7426B00A1C39A /* Frameworks */,
+				7F2D3E8F17F7426B00A1C39A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F2D3E8F17F7426B00A1C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D3E8E17F7426B00A1C39A /* batteryLifeExtender.app */,
+				7F2D3EAF17F7426B00A1C39A /* batteryLifeExtenderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F2D3E9017F7426B00A1C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D3ED317F7531000A1C39A /* IOKit.framework */,
+				7F2D3E9117F7426B00A1C39A /* Cocoa.framework */,
+				7F2D3EB017F7426B00A1C39A /* XCTest.framework */,
+				7F2D3E9317F7426B00A1C39A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F2D3E9317F7426B00A1C39A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D3E9417F7426B00A1C39A /* AppKit.framework */,
+				7F2D3E9517F7426B00A1C39A /* CoreData.framework */,
+				7F2D3E9617F7426B00A1C39A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7F2D3E9717F7426B00A1C39A /* bateryLifeExtender */ = {
+			isa = PBXGroup;
+			children = (
+				7FF6A6B417F8977A007DF566 /* Pics */,
+				7F2D3EA317F7426B00A1C39A /* AppDelegate.h */,
+				7F2D3EA417F7426B00A1C39A /* AppDelegate.m */,
+				7F2D3EA617F7426B00A1C39A /* MainMenu.xib */,
+				7F2D3EA917F7426B00A1C39A /* Images.xcassets */,
+				7F2D3E9817F7426B00A1C39A /* Supporting Files */,
+				7F2D3ED517F75D0500A1C39A /* battery.h */,
+				7F2D3ED617F75D0500A1C39A /* battery.m */,
+			);
+			path = bateryLifeExtender;
+			sourceTree = "<group>";
+		};
+		7F2D3E9817F7426B00A1C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D3E9917F7426B00A1C39A /* batteryLifeExtender-Info.plist */,
+				7F2D3E9A17F7426B00A1C39A /* InfoPlist.strings */,
+				7F2D3E9D17F7426B00A1C39A /* main.m */,
+				7F2D3E9F17F7426B00A1C39A /* batteryLifeExtender-Prefix.pch */,
+				7F2D3EA017F7426B00A1C39A /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FF6A6B417F8977A007DF566 /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D3ECA17F7483200A1C39A /* leaf.png */,
+				7F2D3ECB17F7483200A1C39A /* leafInv.png */,
+				7FF6A6A617F89769007DF566 /* SYB16.png */,
+				7FF6A6A717F89769007DF566 /* SYB32.png */,
+				7FF6A6B517F897C0007DF566 /* SYB64.png */,
+				7FF6A6A817F89769007DF566 /* SYB128.png */,
+				7FF6A6A917F89769007DF566 /* SYB256.png */,
+				7FF6A6AA17F89769007DF566 /* SYB512.png */,
+				7FF6A6AB17F89769007DF566 /* SYB512@2x.png */,
+				7FF6A6AC17F89769007DF566 /* SYBINV.png */,
+				7FF6A6A217F894F3007DF566 /* SYB.png */,
+				7FF6A6A317F894F3007DF566 /* SYB.svg */,
+			);
+			name = Pics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F2D3E8D17F7426B00A1C39A /* batteryLifeExtender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F2D3EBF17F7426B00A1C39A /* Build configuration list for PBXNativeTarget "batteryLifeExtender" */;
+			buildPhases = (
+				7F2D3E8A17F7426B00A1C39A /* Sources */,
+				7F2D3E8B17F7426B00A1C39A /* Frameworks */,
+				7F2D3E8C17F7426B00A1C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = batteryLifeExtender;
+			productName = bateryLifeExtender;
+			productReference = 7F2D3E8E17F7426B00A1C39A /* batteryLifeExtender.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F2D3EAE17F7426B00A1C39A /* batteryLifeExtenderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F2D3EC217F7426B00A1C39A /* Build configuration list for PBXNativeTarget "batteryLifeExtenderTests" */;
+			buildPhases = (
+				7F2D3EAB17F7426B00A1C39A /* Sources */,
+				7F2D3EAC17F7426B00A1C39A /* Frameworks */,
+				7F2D3EAD17F7426B00A1C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F2D3EB417F7426B00A1C39A /* PBXTargetDependency */,
+			);
+			name = batteryLifeExtenderTests;
+			productName = bateryLifeExtenderTests;
+			productReference = 7F2D3EAF17F7426B00A1C39A /* batteryLifeExtenderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F2D3E8617F7426B00A1C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "MaMi Apps";
+				TargetAttributes = {
+					7F2D3E8D17F7426B00A1C39A = {
+						DevelopmentTeam = ER4WXW95X6;
+					};
+					7F2D3EAE17F7426B00A1C39A = {
+						TestTargetID = 7F2D3E8D17F7426B00A1C39A;
+					};
+				};
+			};
+			buildConfigurationList = 7F2D3E8917F7426B00A1C39A /* Build configuration list for PBXProject "batteryLifeExtender" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F2D3E8517F7426B00A1C39A;
+			productRefGroup = 7F2D3E8F17F7426B00A1C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F2D3E8D17F7426B00A1C39A /* batteryLifeExtender */,
+				7F2D3EAE17F7426B00A1C39A /* batteryLifeExtenderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F2D3E8C17F7426B00A1C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF6A6AF17F89769007DF566 /* SYB128.png in Resources */,
+				7FF6A6B317F89769007DF566 /* SYBINV.png in Resources */,
+				7F2D3E9C17F7426B00A1C39A /* InfoPlist.strings in Resources */,
+				7F2D3ECC17F7483200A1C39A /* leaf.png in Resources */,
+				7FF6A6B617F897C0007DF566 /* SYB64.png in Resources */,
+				7F2D3EAA17F7426B00A1C39A /* Images.xcassets in Resources */,
+				7FF6A6B217F89769007DF566 /* SYB512@2x.png in Resources */,
+				7FF6A6A517F894F3007DF566 /* SYB.svg in Resources */,
+				7F2D3EA217F7426B00A1C39A /* Credits.rtf in Resources */,
+				7FF6A6AE17F89769007DF566 /* SYB32.png in Resources */,
+				7F2D3EA817F7426B00A1C39A /* MainMenu.xib in Resources */,
+				7FF6A6B117F89769007DF566 /* SYB512.png in Resources */,
+				7FF6A6B017F89769007DF566 /* SYB256.png in Resources */,
+				7FF6A6AD17F89769007DF566 /* SYB16.png in Resources */,
+				7FF6A6A417F894F3007DF566 /* SYB.png in Resources */,
+				7F2D3ECD17F7483200A1C39A /* leafInv.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2D3EAD17F7426B00A1C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F2D3E8A17F7426B00A1C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2D3ED717F75D0500A1C39A /* battery.m in Sources */,
+				7F1FCD7917F868C100ABFC6F /* NSAttributedString+Hyperlink.m in Sources */,
+				7F2D3EA517F7426B00A1C39A /* AppDelegate.m in Sources */,
+				7F2D3E9E17F7426B00A1C39A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2D3EAB17F7426B00A1C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F2D3EB417F7426B00A1C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F2D3E8D17F7426B00A1C39A /* batteryLifeExtender */;
+			targetProxy = 7F2D3EB317F7426B00A1C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F2D3E9A17F7426B00A1C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F2D3E9B17F7426B00A1C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F2D3EA017F7426B00A1C39A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F2D3EA117F7426B00A1C39A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7F2D3EA617F7426B00A1C39A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F2D3EA717F7426B00A1C39A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F2D3EBD17F7426B00A1C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7F2D3EBE17F7426B00A1C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7F2D3EC017F7426B00A1C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bateryLifeExtender/batteryLifeExtender-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/bateryLifeExtender/batteryLifeExtender-Info.plist";
+				PRODUCT_NAME = batteryLifeExtender;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F2D3EC117F7426B00A1C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bateryLifeExtender/batteryLifeExtender-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/bateryLifeExtender/batteryLifeExtender-Info.plist";
+				PRODUCT_NAME = batteryLifeExtender;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7F2D3EC317F7426B00A1C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bateryLifeExtender.app/Contents/MacOS/bateryLifeExtender";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bateryLifeExtender/bateryLifeExtender-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "bateryLifeExtenderTests/batteryLifeExtenderTests-Info.plist";
+				PRODUCT_NAME = batteryLifeExtenderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7F2D3EC417F7426B00A1C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bateryLifeExtender.app/Contents/MacOS/bateryLifeExtender";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bateryLifeExtender/bateryLifeExtender-Prefix.pch";
+				INFOPLIST_FILE = "bateryLifeExtenderTests/batteryLifeExtenderTests-Info.plist";
+				PRODUCT_NAME = batteryLifeExtenderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F2D3E8917F7426B00A1C39A /* Build configuration list for PBXProject "batteryLifeExtender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F2D3EBD17F7426B00A1C39A /* Debug */,
+				7F2D3EBE17F7426B00A1C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F2D3EBF17F7426B00A1C39A /* Build configuration list for PBXNativeTarget "batteryLifeExtender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F2D3EC017F7426B00A1C39A /* Debug */,
+				7F2D3EC117F7426B00A1C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F2D3EC217F7426B00A1C39A /* Build configuration list for PBXNativeTarget "batteryLifeExtenderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F2D3EC317F7426B00A1C39A /* Debug */,
+				7F2D3EC417F7426B00A1C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F2D3E8617F7426B00A1C39A /* Project object */;
+}
