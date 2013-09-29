@@ -20,10 +20,10 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="jFX-3A-V8y">
             <items>
-                <menuItem title="Configure..." id="7PQ-Ce-zMR">
+                <menuItem title="Info..." id="7PQ-Ce-zMR">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="configure:" target="494" id="6gq-zj-q3J"/>
+                        <action selector="info:" target="494" id="LcD-NH-n3a"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Exit" id="KbZ-1I-OP0">

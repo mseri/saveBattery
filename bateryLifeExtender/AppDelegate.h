@@ -11,31 +11,35 @@
 #import <IOKit/ps/IOPSKeys.h>
 
 #import "battery.h"
-
+#import "NSAttributedString+Hyperlink.h"
 
 #define NOTIFICATIONS 3
 
 #define MAXCHARGE 80
 #define MINCHARGE 20
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
     NSImage *statusImage;
     NSImage *statusHighlightedImage;
     
-    bool wasCharging;
-    bool isCharging;
-    
-    int notificated;
+    int notified;
 }
 
-- (IBAction)configure:(id)sender;
+@property (strong) NSWindow* wc;
+
+- (IBAction)info:(id)sender;
 - (IBAction)exit:(id)sender;
+
+- (battery *) getBatteryInfo;
+- (void)initializePowerSourceChanges;
 
 - (void) checkStatus;
 - (void) sendNotification:(NSString *)message;
+void PowerSourcesHaveChanged(void *context);
+- (void) powerChanged;
 
-- (battery *) getBatteryInfo;
+- (void) closeInfo:(id)sender;
 
 @end
