@@ -28,9 +28,11 @@
 }
 
 @property (strong) NSWindow* wc;
+@property (strong) NSTimer *batteryLoop;
 
 - (IBAction)info:(id)sender;
 - (IBAction)exit:(id)sender;
+- (void) closeInfo:(id)sender;
 
 - (battery *) getBatteryInfo;
 - (void)initializePowerSourceChanges;
@@ -40,6 +42,8 @@
 void PowerSourcesHaveChanged(void *context);
 - (void) powerChanged;
 
-- (void) closeInfo:(id)sender;
+- (void) fileNotifications;
+- (void) receiveSleepNote:(NSNotification*) note;
+- (void) receiveWakeNote:(NSNotification*) note;
 
 @end
