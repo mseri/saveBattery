@@ -7,7 +7,7 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F2D3E8D17F7426B00A1C39A"
                BuildableName = "bateryLifeExtender.app"
-               BlueprintName = "bateryLifeExtender"
-               ReferencedContainer = "container:bateryLifeExtender.xcodeproj">
+               BlueprintName = "batteryLifeExtender"
+               ReferencedContainer = "container:batteryLifeExtender.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F2D3EAE17F7426B00A1C39A"
-               BuildableName = "bateryLifeExtenderTests.xctest"
-               BlueprintName = "bateryLifeExtenderTests"
-               ReferencedContainer = "container:bateryLifeExtender.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F2D3E8D17F7426B00A1C39A"
             BuildableName = "bateryLifeExtender.app"
-            BlueprintName = "bateryLifeExtender"
-            ReferencedContainer = "container:bateryLifeExtender.xcodeproj">
+            BlueprintName = "batteryLifeExtender"
+            ReferencedContainer = "container:batteryLifeExtender.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F2D3E8D17F7426B00A1C39A"
             BuildableName = "bateryLifeExtender.app"
-            BlueprintName = "bateryLifeExtender"
-            ReferencedContainer = "container:bateryLifeExtender.xcodeproj">
+            BlueprintName = "batteryLifeExtender"
+            ReferencedContainer = "container:batteryLifeExtender.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F2D3E8D17F7426B00A1C39A"
             BuildableName = "bateryLifeExtender.app"
-            BlueprintName = "bateryLifeExtender"
-            ReferencedContainer = "container:bateryLifeExtender.xcodeproj">
+            BlueprintName = "batteryLifeExtender"
+            ReferencedContainer = "container:batteryLifeExtender.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

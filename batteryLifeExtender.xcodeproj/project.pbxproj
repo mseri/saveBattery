@@ -106,7 +106,7 @@
 			children = (
 				7F1FCD7717F868C100ABFC6F /* NSAttributedString+Hyperlink.h */,
 				7F1FCD7817F868C100ABFC6F /* NSAttributedString+Hyperlink.m */,
-				7F2D3E9717F7426B00A1C39A /* bateryLifeExtender */,
+				7F2D3E9717F7426B00A1C39A /* batteryLifeExtender */,
 				7F2D3E9017F7426B00A1C39A /* Frameworks */,
 				7F2D3E8F17F7426B00A1C39A /* Products */,
 			);
@@ -142,7 +142,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		7F2D3E9717F7426B00A1C39A /* bateryLifeExtender */ = {
+		7F2D3E9717F7426B00A1C39A /* batteryLifeExtender */ = {
 			isa = PBXGroup;
 			children = (
 				7FF6A6B417F8977A007DF566 /* Pics */,
@@ -154,6 +154,7 @@
 				7F2D3ED517F75D0500A1C39A /* battery.h */,
 				7F2D3ED617F75D0500A1C39A /* battery.m */,
 			);
+			name = batteryLifeExtender;
 			path = bateryLifeExtender;
 			sourceTree = "<group>";
 		};
