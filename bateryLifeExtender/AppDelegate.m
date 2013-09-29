@@ -136,8 +136,9 @@
     if (numOfSources == 0) {
         NSLog(@"Error in CFArrayGetCount");
         
-        CFRelease(pSource);
+        //CFRelease(pSource);
         CFRelease(sources);
+        CFRelease(blob);
         return  bInfo;
     }
     
@@ -147,12 +148,11 @@
         if (!pSource) {
             NSLog(@"Error in IOPSGetPowerSourceDescription");
             
-            CFRelease(pSource);
+            //CFRelease(pSource);
             CFRelease(sources);
+            CFRelease(blob);
             return bInfo;
         }
-        
-        psValue = (CFStringRef) CFDictionaryGetValue(pSource, CFSTR(kIOPSNameKey));
         
         int curCapacity = 0;
         int maxCapacity = 0;
@@ -182,14 +182,16 @@
             bInfo.percent = -1.0f;
         }
         
-        CFRelease(pSource);
+        //CFRelease(pSource);
         CFRelease(sources);
+        CFRelease(blob);
         
         return bInfo;
     }
     
-    CFRelease(pSource);
+    //CFRelease(pSource);
     CFRelease(sources);
+    CFRelease(blob);
 
     return bInfo;
 }
