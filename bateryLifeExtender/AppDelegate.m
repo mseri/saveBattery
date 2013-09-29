@@ -41,6 +41,7 @@
 
 - (IBAction)info:(id)sender
 {
+    self.wc = nil;
     
     NSRect frame = NSMakeRect(0, 0, 480, 150);
     NSWindow* infoWindow  = [[NSWindow alloc] initWithContentRect:frame
@@ -55,7 +56,7 @@
     
     self.wc = infoWindow;
     
-    NSTextView* infoText = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(20, -16, 440, 140))];
+    NSTextView* infoText = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(20, 46, 440, 80))];
     
     [infoText setTextColor:[NSColor blackColor]];
     [infoText setDrawsBackground:NO];
