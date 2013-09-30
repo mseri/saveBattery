@@ -15,8 +15,8 @@
 
 #define NOTIFICATIONS 3
 
-#define MAXCHARGE 80
-#define MINCHARGE 20
+#define MAXCHARGE 80.0f
+#define MINCHARGE 20.0f
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate> {
     IBOutlet NSMenu *statusMenu;
@@ -24,6 +24,7 @@
     NSImage *statusImage;
     //NSImage *statusHighlightedImage;
     
+    bool wasCharging;
     int notified;
 }
 

@@ -28,12 +28,15 @@
     [statusItem setToolTip:@"Battery Life Expander"];
     [statusItem setHighlightMode:YES];
     
+    battery* bInfo = [self getBatteryInfo];
+    wasCharging = bInfo.charging;
+    
     [self generateInfoWindow];
     
     [self initializePowerSourceChanges];
-    
     notified = 0;
     
+    //NSLog(@"Power start log: %d", notified);
     [self checkStatus];
     
     self.batteryLoop = [NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
@@ -109,7 +112,7 @@
 
 - (IBAction)info:(id)sender
 {
-    NSLog(@"%@", self.wc);
+    //NSLog(@"%@", self.wc);
     if (!self.wc) {
         [self generateInfoWindow];
     }
@@ -225,11 +228,11 @@
     battery* bInfo = [self getBatteryInfo];
     //NSLog(@"%f - %d", bInfo.percent, bInfo.charging);
     
-    if (notified < NOTIFICATIONS && bInfo.charging && bInfo.percent >= 80.0f) {
+    if (notified < NOTIFICATIONS && bInfo.charging && bInfo.percent >= MAXCHARGE) {
         notified++;
         [self sendNotification:@"The battery charge is higher than 80%, you should now unplug it."];
         statusImage = [NSImage imageNamed:@"leafRed.png"];
-    } else if (notified < NOTIFICATIONS && !bInfo.charging && bInfo.percent <= 20.0f) {
+    } else if (notified < NOTIFICATIONS && !bInfo.charging && bInfo.percent <= MINCHARGE) {
         notified++;
         [self sendNotification:@"The battery charge is lower than 20%, you should now plug it."];
         statusImage = [NSImage imageNamed:@"leafRed.png"];
@@ -242,7 +245,7 @@
     [statusItem setImage:statusImage];
     [statusItem setAlternateImage:statusImage];
 
-    
+    //NSLog(@"After check log: %d", notified);
 }
 
 - (void) sendNotification:(NSString *)message {
@@ -262,9 +265,14 @@ void PowerSourcesHaveChanged(void *context) {
 }
 
 -(void) powerChanged {
-    //NSLog(@"Power sources status changed");
-    notified = 0;
-    [self checkStatus];
+    battery* bInfo = [self getBatteryInfo];
+    
+    // Make a check only if the charging status changed.
+    if (wasCharging != bInfo.charging) {
+        wasCharging = bInfo.charging;
+        notified = 0;
+        [self checkStatus];
+    }
 }
 
 #pragma mark Notification Delegate Methods
