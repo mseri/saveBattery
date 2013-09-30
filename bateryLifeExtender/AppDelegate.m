@@ -229,8 +229,9 @@
         statusImage = [NSImage imageNamed:@"leafRed.png"];
     } else if (bInfo.percent <= -1.0f) {
         [self sendNotification:@"Something is wrong with your battery. Check it as soon as possible."];
-    } else {
         statusImage = [NSImage imageNamed:@"leafQuestion.png"];
+    } else {
+        statusImage = [NSImage imageNamed:@"leaf.png"];
     }
     [statusItem setImage:statusImage];
     [statusItem setAlternateImage:statusImage];
