@@ -27,8 +27,10 @@
     int notified;
 }
 
-@property (strong) NSWindow* wc;
+@property (strong, retain) NSWindow* wc;
 @property (strong) NSTimer *batteryLoop;
+
+- (void) generateInfoWindow;
 
 - (IBAction)info:(id)sender;
 - (IBAction)exit:(id)sender;

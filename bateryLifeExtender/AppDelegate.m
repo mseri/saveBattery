@@ -28,6 +28,8 @@
     [statusItem setToolTip:@"Battery Life Expander"];
     [statusItem setHighlightMode:YES];
     
+    [self generateInfoWindow];
+    
     [self initializePowerSourceChanges];
     
     notified = 0;
@@ -37,24 +39,19 @@
     self.batteryLoop = [NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(checkStatus) userInfo:nil repeats:YES];
 }
 
-# pragma mark IBActions
-
-- (IBAction)info:(id)sender
-{
-    self.wc = nil;
+- (void) generateInfoWindow {
     
     NSRect frame = NSMakeRect(0, 0, 480, 150);
-    NSWindow* infoWindow  = [[NSWindow alloc] initWithContentRect:frame
-                                                        styleMask:NSTitledWindowMask|NSClosableWindowMask
-                                                          backing:NSBackingStoreBuffered
-                                                            defer:NO];
+    self.wc  = [[NSWindow alloc] initWithContentRect:frame
+                                           styleMask:NSTitledWindowMask|NSClosableWindowMask
+                                             backing:NSBackingStoreBuffered
+                                               defer:NO];
+    NSWindow* infoWindow = self.wc;
     CGFloat xPos = NSWidth([[infoWindow screen] frame])/2 - NSWidth([infoWindow frame])/2;
     CGFloat yPos = NSHeight([[infoWindow screen] frame])/2 - NSHeight([infoWindow frame])/2;
     [infoWindow setFrame:NSMakeRect(xPos, yPos, NSWidth([infoWindow frame]), NSHeight([infoWindow frame])) display:YES];
     
     infoWindow.title=@"Save Your Battery!";
-    
-    self.wc = infoWindow;
     
     NSTextView* infoText = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(20, 46, 440, 80))];
     
@@ -72,7 +69,7 @@
     [[infoText textStorage] setAttributedString:string];
     
     [infoText setFont:[NSFont fontWithName:@"Helvetica Light" size:16.0]];
-
+    
     NSFontManager * fontManager = [NSFontManager sharedFontManager];
     NSTextStorage * textStorage = [infoText textStorage];
     [textStorage beginEditing];
@@ -96,7 +93,7 @@
      }];
     [textStorage endEditing];
     
-    [self.wc.contentView addSubview:infoText];
+    [infoWindow.contentView addSubview:infoText];
     
     NSButton* closeButton = [[NSButton alloc] initWithFrame:NSRectFromCGRect(CGRectMake(199, 13, 78, 32))];
     closeButton.title = @"Done!";
@@ -105,9 +102,18 @@
     [closeButton setTarget:self];
     [closeButton setAction:@selector(closeInfo:)];
     
-    [self.wc.contentView addSubview:closeButton];
-    
-    [self.wc makeKeyAndOrderFront:self];
+    [infoWindow.contentView addSubview:closeButton];
+}
+
+# pragma mark IBActions
+
+- (IBAction)info:(id)sender
+{
+    NSLog(@"%@", self.wc);
+    if (!self.wc) {
+        [self generateInfoWindow];
+    }
+    [self.wc makeKeyAndOrderFront:NSApp];
 }
 
 - (IBAction)exit:(id)sender
@@ -116,7 +122,7 @@
 }
 
 -(void) closeInfo:(id)sender {
-    [self.wc close];
+    [self.wc orderOut:NSApp];
 }
 
 #pragma mark Access Battery Info
