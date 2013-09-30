@@ -19,10 +19,10 @@
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     statusImage = [NSImage imageNamed:@"leaf.png"];
-    statusHighlightedImage = [NSImage imageNamed:@"leafInv.png"];
+    //statusHighlightedImage = [NSImage imageNamed:@"leafInv.png"];
     
     [statusItem setImage:statusImage];
-    [statusItem setAlternateImage:statusHighlightedImage];
+    [statusItem setAlternateImage:statusImage];
     
     [statusItem setMenu:statusMenu];
     [statusItem setToolTip:@"Battery Life Expander"];
@@ -222,16 +222,19 @@
     if (notified < NOTIFICATIONS && bInfo.charging && bInfo.percent >= 80.0f) {
         notified++;
         [self sendNotification:@"The battery charge is higher than 80%, you should now unplug it."];
-    }
-    
-    if (notified < NOTIFICATIONS && !bInfo.charging && bInfo.percent <= 20.0f) {
+        statusImage = [NSImage imageNamed:@"leafRed.png"];
+    } else if (notified < NOTIFICATIONS && !bInfo.charging && bInfo.percent <= 20.0f) {
         notified++;
         [self sendNotification:@"The battery charge is lower than 20%, you should now plug it."];
-    }
-    
-    if (bInfo.percent <= -1.0f) {
+        statusImage = [NSImage imageNamed:@"leafRed.png"];
+    } else if (bInfo.percent <= -1.0f) {
         [self sendNotification:@"Something is wrong with your battery. Check it as soon as possible."];
+    } else {
+        statusImage = [NSImage imageNamed:@"leafQuestion.png"];
     }
+    [statusItem setImage:statusImage];
+    [statusItem setAlternateImage:statusImage];
+
     
 }
 

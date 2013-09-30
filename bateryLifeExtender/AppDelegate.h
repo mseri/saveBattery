@@ -22,7 +22,7 @@
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
     NSImage *statusImage;
-    NSImage *statusHighlightedImage;
+    //NSImage *statusHighlightedImage;
     
     int notified;
 }
